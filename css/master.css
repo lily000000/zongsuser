@@ -1,0 +1,114 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+    /*border: none;*/
+    outline-style: none;
+    vertical-align: top;
+}
+html {
+    background: #FFFFFF;
+}
+body{
+    margin: 0 auto;
+    width: 7.5rem;
+    font-size: .32rem;
+    font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif;
+    background-color: #FFFFFF;
+    height: 100%;
+    max-width: 1080px;
+}
+head title{text-align: center;}
+ul,ol{
+    list-style: none;
+}
+
+a{
+    color: #333333;
+    text-decoration: none;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+}
+/************以上是公共声明*********/
+
+#tabs-container{width: 5.6rem;height: 9.6rem;float: left;position: relative;box-sizing: border-box;margin-left: .26rem;overflow: hidden;}
+.menuo{width: 1.52rem;float: left;z-index: 999999;background: #EFEFEF; }
+.tabs li{width: 1.52rem;height: 1.6rem;font-size: .96rem;text-align: center;line-height: 1.5rem;border-bottom: 1px solid  #e0e0e0;border-left: .06rem solid #EFEFEF;box-sizing: border-box;border-right:1px solid #E0E0E0; ;}
+.tabs li.active{width: 1.52rem; background: #ffffff;color: #000000;border-left: .06rem solid;box-sizing: border-box;border-right:1px solid #FFFFFF;}
+.shop{ width:5.68rem;height: 1.60rem;border-bottom: 1px solid #e8e8e8;box-sizing: border-box;overflow: hidden;}
+.shop .number{border-radius: .08rem;width: .52rem;height: .68rem;line-height: .68rem;text-align: center;font-size: .4rem;float: left;margin-top: .46rem;margin-left: .42rem;}
+.coloro{color: #F6931E;border: 1px solid #F6931E;}
+.colort{color: #EF5748;border: 1px solid #EF5748;}
+.colors{color: #0BDA66;border: 1px solid #0BDA66;}
+.colorf{color:#DC19DC;border: 1px solid #DC19DC;}
+.colorv{color:#4958F9;border: 1px solid #4958F9;}
+.colorx{color:#11A7EA;border: 1px solid #11A7EA;}
+.shop .imgo{width: 1.08rem;float: left;margin-left: .28rem;margin-top: .18rem}
+.shop .imgo img{width: 100%;height: 100%;}
+.shop .title{float: left;font-size: .3rem;cursor: pointer;margin-top: .34rem;color:  #131313;}
+.shop .title p:last-child{color: #F33421;margin-top: .15rem;font-size: .32rem}
+.shop .title:hover{color: red}
+.shop .title del{font-size:.28rem;color: #cccccc;margin-left: .14rem;line-height: .45rem}
+.promotion{width: .7rem;height: .66rem;float: right;margin-top: .44rem;margin-right: .2rem}
+.promotion img{width: 100%;background-size: contain;}
+.fracture{width: .7rem;height: .66rem;float: right;margin-top: .44rem;margin-right: .2rem}
+.fracture img{width: 100%;}
+/*******以上是商品购买内容修饰**********/
+.ft{width: 7.5rem;height:2.3rem;margin-top: .16rem}
+.ft img{width: 100%;}
+/*********以上是购买页面修饰*********/
+
+.gooimg{width: 3.5rem;}
+.pay{background: #ffffff;padding-bottom: .4rem}
+.pay .goods{width: 1rem;height: 2.83rem;float: left;margin-top: .95rem;padding-left: 1.4rem;}
+.pay .goods img{width: 100%}
+.pay_t{float: right;width: 3.5rem;height: 4.3rem;padding-left: .5rem;border-left: 1px solid #D8D8D8;margin-top: .3rem}
+.pay_t p{font-size: .3rem}
+.pay_t .pty{font-size: .3rem;}
+.biaoti{margin-top: .9rem;margin-left: .15rem;}
+.money{margin-top: .4rem}
+.money span{color: #f55f50;font-size: .38rem}
+.money del{color: #b9b9b9;font-size: .3rem;line-height: .5rem;margin-left: .2rem}
+.pay-ad{margin-top: .62rem;}
+.btn_pay{width: 2.7rem;height: .8rem;background: #f55f50;color: #ffffff;font-size: .35rem;text-align: center;line-height: .8rem;border-radius: .1rem;margin-top: .82rem}
+/*.content{background: #f0f0f0;}*/
+/*********以上是商品购买详情页面**********/
+.piceso{width:1.45rem;height: 1.45rem;margin: auto;}
+.piceso img{width: 100%;}
+.instructions{text-align: center;}
+.instructions p{font-size: .3rem;/*line-height: .55rem*/}
+.instructions p:nth-child(1){margin-top: .4rem;}
+.instructions p:nth-child(2){margin-top: .2rem;}
+.instructions p:nth-child(3){margin-top: .2rem;}
+.instructions .phone{color: red;}
+.pay_o{padding-top: .4rem}
+.pay_btn1{background: #f55f50;font-size: .34rem;color: #FFFFFF;border-radius: .1rem;text-align: center;width: 6rem;line-height: .8rem;height: .8rem;margin: auto;margin-top: .35rem}
+.fto,.pay_ft{width: 7.5rem;margin-top: .62rem;}
+.fto{margin-top: .2rem;}
+.pay_ft{background:#f0f0f0;}
+.ad{width: 100%;height: 3.2rem;}
+.fto .di,.pay_ft .di{margin-bottom: .04rem}
+.ad img{width: 100%;}
+.content{background:#F0F0F0 ;}
+.wrap{padding-bottom: .4rem;background: #FFFFFF;}
+/**********购买完成界面*************/
+*{
+    -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+    -webkit-user-select:none; /*webkit浏览器*/
+    -khtml-user-select:none; /*早期浏览器*/
+    -moz-user-select:none;/*火狐*/
+    -ms-user-select:none; /*IE10*/
+    user-select:none;
+}
+input,textarea {
+    -webkit-user-select:auto; /*webkit浏览器*/
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+/*******禁止复制******/

@@ -1,0 +1,476 @@
+﻿<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+		<meta content="yes" name="app-moblie-web-app-capable">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<link type="text/css" href="css/master.css" rel="stylesheet">
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+		<title>智微一号</title>
+		<script>
+			var Dpr = 1,
+				uAgent = window.navigator.userAgent;
+			var isIOS = uAgent.match(/iphone/i);
+			var isYIXIN = uAgent.match(/yixin/i);
+			var is2345 = uAgent.match(/Mb2345/i);
+			var ishaosou = uAgent.match(/mso_app/i);
+			var isSogou = uAgent.match(/sogoumobilebrowser/ig);
+			var isLiebao = uAgent.match(/liebaofast/i);
+			var isGnbr = uAgent.match(/GNBR/i);
+
+			function resizeRoot() {
+				var wWidth = (screen.width > 0) ? (window.innerWidth >= screen.width || window.innerWidth == 0) ? screen.width : window.innerWidth : window.innerWidth,
+					wDpr, wFsize;
+				var wHeight = (screen.height > 0) ? (window.innerHeight >= screen.height || window.innerHeight == 0) ? screen.height : window.innerHeight : window.innerHeight;
+				if(window.devicePixelRatio) {
+					wDpr = window.devicePixelRatio;
+				} else {
+					wDpr = isIOS ? wWidth > 818 ? 3 : wWidth > 480 ? 2 : 1 : 1;
+				}
+				if(isIOS) {
+					wWidth = screen.width;
+					wHeight = screen.height;
+				}
+				// if(window.orientation==90||window.orientation==-90){
+				//     wWidth = wHeight;
+				// }else if((window.orientation==180||window.orientation==0)){
+				// }
+				if(wWidth > wHeight) {
+					wWidth = wHeight;
+				}
+				wFsize = wWidth > 1080 ? 144 : wWidth / 7.5;
+				wFsize = wFsize > 32 ? wFsize : 32;
+				window.screenWidth_ = wWidth;
+				if(isYIXIN || is2345 || ishaosou || isSogou || isLiebao || isGnbr) { //YIXIN 和 2345 这里有个刚调用系统浏览器时候的bug，需要一点延迟来获取
+					setTimeout(function() {
+						wWidth = (screen.width > 0) ? (window.innerWidth >= screen.width || window.innerWidth == 0) ? screen.width : window.innerWidth : window.innerWidth;
+						wHeight = (screen.height > 0) ? (window.innerHeight >= screen.height || window.innerHeight == 0) ? screen.height : window.innerHeight : window.innerHeight;
+						wFsize = wWidth > 1080 ? 144 : wWidth / 7.5;
+						wFsize = wFsize > 32 ? wFsize : 32;
+						// document.getElementsByTagName('html')[0].dataset.dpr = wDpr;
+						document.getElementsByTagName('html')[0].style.fontSize = wFsize + 'px';
+					}, 500);
+				} else {
+					// document.getElementsByTagName('html')[0].dataset.dpr = wDpr;
+					document.getElementsByTagName('html')[0].style.fontSize = wFsize + 'px';
+				}
+				// alert("fz="+wFsize+";dpr="+window.devicePixelRatio+";UA="+uAgent+";width="+wWidth+";sw="+screen.width+";wiw="+window.innerWidth+";wsw="+window.screen.width+window.screen.availWidth);
+			}
+			resizeRoot();
+		</script>
+		<style>
+			/*.swiper-slide{
+				display: none;
+			}*/
+		</style>
+	</head>
+
+	<body>
+		<div class="clearfix">
+			<ul class="menuo tabs">
+				<li class="active" style="color:#F6931E">1</li>
+				<li style="color: #EF5748">2</li>
+				<li style="color: #0BDA66">3</li>
+				<li style="color: #DC19DC">4</li>
+				<li style="color: #4958F9">5</li>
+				<li style="color: #11A7EA">6</li>
+			</ul>
+			<div id="tabs-container" class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="content-slide">
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number coloro">1</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del></del></p>
+								</li>
+								<li class="promotion"><img src="img/hot.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number coloro">2</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del></del></p>
+								</li>
+								<li class="promotion"><img src="img/hot.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number coloro">3</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del></del></p>
+								</li>
+								<li class="promotion"><img src="img/hot.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number coloro">4</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="fracture"><img src="img/cuxiao.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number coloro">5</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="fracture"><img src="img/cuxiao.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number coloro">6</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="fracture"><img src="img/cuxiao.png"></li>
+							</ul>
+						</div>
+					</div>
+					<!----第一层----->
+					<div class="swiper-slide">
+						<div class="content-slide">
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colort">1</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del></del></p>
+								</li>
+								<li class="promotion"><img src="img/hot.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colort">2</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del></del></p>
+								</li>
+								<li class="promotion"><img src="img/hot.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colort">3</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="fracture"><img src="img/cuxiao.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colort">4</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="fracture"><img src="img/cuxiao.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colort">5</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="fracture"><img src="img/cuxiao.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colort">6</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del></del></p>
+								</li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<!----第二层----->
+					<div class="swiper-slide">
+						<div class="content-slide">
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colors">1</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="promotion"><img src="img/hot.png"></li>
+
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colors">2</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="promotion"><img src="img/hot.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colors">3</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colors">4</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colors">5</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colors">6</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<!----第三层----->
+					<div class="swiper-slide">
+						<div class="content-slide">
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorf">1</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="fracture"><img src="img/cuxiao.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorf">2</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="fracture"><img src="img/cuxiao.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorf">3</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorf">4</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorf">5</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorf">6</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<!----第四层----->
+					<div class="swiper-slide">
+						<div class="content-slide">
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorv">1</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="fracture"><img src="img/cuxiao.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorv">2</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="fracture"><img src="img/cuxiao.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorv">3</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorv">4</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorv">5</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorv">6</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<!----第五层----->
+					<div class="swiper-slide">
+						<div class="content-slide">
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorx">1</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="promotion"><img src="img/hot.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorx">2</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li class="promotion"><img src="img/hot.png"></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorx">3</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorx">4</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorx">5</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+							<ul class="shop clearfix" onclick=javascrtpt:jump1()>
+								<li class="number colorx">6</li>
+								<li class="imgo"><img src="img/ji.jpg"></li>
+								<li class="title">
+									<p>娃哈哈激活柠檬</p>
+									<p><span>¥2.3</span> <del>¥2.5</del></p>
+								</li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<!------第六层-------->
+				</div>
+			</div>
+		</div>
+		<footer class="ft">
+			<img src="img/goumai.jpg">
+		</footer>
+	</body>
+	<script type="text/javascript"> 
+          function jump1(){
+                window.location.href="pay.html";
+             }//调转页面
+		window.onload = function() {
+
+
+			var tabsSwiper = new Swiper('#tabs-container', {
+				speed: 1000,
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				direction: 'vertical',
+				onSlideChangeStart: function() {
+					$(".tabs li").removeClass('active')
+					$(".tabs li").eq(tabsSwiper.activeIndex).addClass('active')
+				}
+			})
+			$(".tabs li").on('touchstart mousedown', function(e) {
+				e.preventDefault()
+				$(".tabs li").removeClass('active')
+				$(this).addClass('active')
+				tabsSwiper.slideTo($(this).index())
+				
+			})
+			$(".tabs li").click(function(e) {
+				e.preventDefault()
+			})
+			
+		}
+	</script>
+
+</html>
